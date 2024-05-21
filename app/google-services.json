@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "159011988384",
+    "firebase_url": "https://tfg2024-dc712-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tfg2024-dc712",
+    "storage_bucket": "tfg2024-dc712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159011988384:android:1772877b918d7862a93ac5",
+        "android_client_info": {
+          "package_name": "com.example.tfg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZdeR9lShFuFIcbChHwrJxsOm2y3SqOaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

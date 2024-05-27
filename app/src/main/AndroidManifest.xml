@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TFG"
         tools:targetApi="31">
         <activity
+            android:name=".MyAccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

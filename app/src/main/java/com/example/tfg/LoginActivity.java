@@ -51,14 +51,23 @@ public class LoginActivity extends AppCompatActivity {
 
                                 final String getPassword = snapshot.child(usuarioTxt).child("password").getValue(String.class);
 
-                                if(getPassword.equals(passwordTxt)){
+                                if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(LoginActivity.this, "Inicio De Sesion Correcto", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                    intent.putExtra("usuario", usuarioTxt);
+                                    startActivity(intent);
                                     finish();
-                                }
-                                else{
+                                } else {
                                     Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
                                 }
+                                //if(getPassword.equals(passwordTxt)){
+                                //    Toast.makeText(LoginActivity.this, "Inicio De Sesion Correcto", Toast.LENGTH_SHORT).show();
+                                //    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                //    finish();
+                                //}
+                               // else{
+                                //    Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+                                //}
                             }
                             else{
                                 Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();

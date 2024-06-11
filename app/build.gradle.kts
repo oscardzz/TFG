@@ -41,6 +41,14 @@ dependencies {
 
     implementation("com.google.firebase:firebase-database")
 
+    implementation("com.google.android.material:material:1.3.0-alpha03")
+
+    implementation ("com.google.android.material:material:1.5.0")
+    implementation ("androidx.fragment:fragment:1.3.6")
+
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+    implementation("androidx.leanback:leanback:1.0.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")

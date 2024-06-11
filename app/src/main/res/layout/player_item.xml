@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="16dp"
+    android:radius="8dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/playerImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/playerTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Team" />
+
+        <TextView
+            android:id="@+id/playerPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Position" />
+
+        <TextView
+            android:id="@+id/playerNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Nationality" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

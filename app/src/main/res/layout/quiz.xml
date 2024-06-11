@@ -104,3 +104,4 @@
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toEndOf="@+id/inicar1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+

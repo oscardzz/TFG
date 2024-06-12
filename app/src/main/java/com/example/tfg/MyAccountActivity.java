@@ -35,7 +35,7 @@ public class MyAccountActivity extends AppCompatActivity {
         editButton = findViewById(R.id.editButton);
         updateButton = findViewById(R.id.updateButton);
 
-        usuarioTxt = getIntent().getStringExtra("usuario");
+        usuarioTxt = getIntent().getStringExtra("usuarios");
 
         if (usuarioTxt == null) {
             Toast.makeText(this, "Error: Usuario no encontrado", Toast.LENGTH_SHORT).show();

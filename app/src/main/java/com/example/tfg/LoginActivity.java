@@ -39,50 +39,37 @@ public class LoginActivity extends AppCompatActivity {
                 final String usuarioTxt = usuarios.getText().toString();
                 final String passwordTxt = password.getText().toString();
 
-                if(usuarioTxt.isEmpty() || passwordTxt.isEmpty()){
-                    Toast.makeText(LoginActivity.this, "Porfavor introduzca su email o contraseña", Toast.LENGTH_SHORT).show();
-                }
-                else{
+                if (usuarioTxt.isEmpty() || passwordTxt.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Por favor, introduzca su email o contraseña", Toast.LENGTH_SHORT).show();
+                } else {
                     myRef.child("usuarios").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.hasChild(usuarioTxt)){
-
-
+                            if (snapshot.hasChild(usuarioTxt)) {
                                 final String getPassword = snapshot.child(usuarioTxt).child("password").getValue(String.class);
 
                                 if (getPassword.equals(passwordTxt)) {
-                                    Toast.makeText(LoginActivity.this, "Inicio De Sesion Correcto", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                     intent.putExtra("usuario", usuarioTxt);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
                                 }
-                                //if(getPassword.equals(passwordTxt)){
-                                //    Toast.makeText(LoginActivity.this, "Inicio De Sesion Correcto", Toast.LENGTH_SHORT).show();
-                                //    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                                //    finish();
-                                //}
-                               // else{
-                                //    Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
-                                //}
-                            }
-                            else{
-                                Toast.makeText(LoginActivity.this, "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(LoginActivity.this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
                             }
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
-
+                            // Handle possible errors.
                         }
                     });
                 }
             }
         });
-
 
         registerNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,9 +78,5 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
-
-
     }
-
-
 }

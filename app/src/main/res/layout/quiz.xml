@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
 
     <TextView
         android:id="@+id/nombrequiz"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="Quiz"
@@ -23,6 +25,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="180dp"
         android:text="Siguiente"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -30,9 +33,10 @@
         android:id="@+id/inicar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="64dp"
         android:text="Iniciar"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opcionc" />
 
@@ -41,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PREGUNTA1"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/opcionA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,56 +56,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A"
-        app:layout_constraintBottom_toBottomOf="@+id/opcionb"
-        app:layout_constraintEnd_toStartOf="@+id/opcionb"
-        app:layout_constraintHorizontal_bias="0.251"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/opcionb"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="20dp"
+
+        />
 
     <Button
         android:id="@+id/opcionb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="171dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="171dp"
+        android:textSize="20dp"
         android:text="B"
-        app:layout_constraintBottom_toTopOf="@+id/puntuacion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nombrequiz" />
+        />
 
     <Button
         android:id="@+id/opcionc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="108dp"
+        android:textSize="20dp"
         android:text="C"
-        app:layout_constraintEnd_toStartOf="@+id/opciond"
-        app:layout_constraintHorizontal_bias="0.626"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/opcionA" />
+       />
 
     <Button
         android:id="@+id/opciond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="52dp"
         android:text="D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/opcionb" />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/puntuacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="284dp"
         android:text="PUNTUACION"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintStart_toEndOf="@+id/inicar1" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="20dp" />
+
+</LinearLayout>

@@ -26,7 +26,7 @@
         <activity
             android:name=".MyAccountActivity"
             android:exported="false" />
-        <activity android:name=".quiz" />
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

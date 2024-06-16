@@ -44,12 +44,15 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
         TextView playerTeam = convertView.findViewById(R.id.playerTeam);
         TextView playerPosition = convertView.findViewById(R.id.playerPosition);
         TextView playerNationality = convertView.findViewById(R.id.playerNationality);
+        TextView playerLeague = convertView.findViewById(R.id.playerLeague);
+
 
         if (player != null) {
             playerName.setText(player.getNombre());
             playerTeam.setText(player.getEquipo());
             playerPosition.setText(player.getPosicion());
             playerNationality.setText(player.getNacionalidad());
+            playerLeague.setText(player.getLiga());
 
             // Cargar la imagen usando Glide
             Glide.with(mContext)

@@ -25,8 +25,8 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quiz);
-        
+        setContentView(R.layout.quiz); // Asegúrate de que este sea el nombre correcto de tu archivo XML
+
         preguntaTextView = findViewById(R.id.pregunta);
         opcionAButton = findViewById(R.id.opcionA);
         opcionBButton = findViewById(R.id.opcionb);
@@ -36,28 +36,25 @@ public class QuizActivity extends AppCompatActivity {
         siguienteButton = findViewById(R.id.siguientequiz);
         puntuacionTextView = findViewById(R.id.puntuacion);
 
-        iniciarButton.setOnClickListener(v -> iniciarQuiz());
-        siguienteButton.setOnClickListener(v -> siguienteQuiz());
-
         inicializarQuizzes();
     }
 
-    private void inicializarQuizzes() {
+    public void inicializarQuizzes() {
         // Inicializar preguntas y quizzes manualmente
         ArrayList<Pregunta> preguntasQuizGoles = new ArrayList<>();
         preguntasQuizGoles.add(new Pregunta("¿Quién tiene más goles en champions?",
-                        new Respuesta("Lewandowski", true, 91),
-                        new Respuesta("Benzema", false, 89),
-                        new Respuesta("Raúl", false, 71),
-                        new Respuesta("Shevchenko", false, 48)
-                ));
+                new Respuesta("Lewandowski", true, 91),
+                new Respuesta("Benzema", false, 89),
+                new Respuesta("Raúl", false, 71),
+                new Respuesta("Shevchenko", false, 48)
+        ));
 
         preguntasQuizGoles.add(new Pregunta("¿Quién tiene más goles en champions?",
                 new Respuesta("Zlatan", false, 48),
                 new Respuesta("Van Nistelrooy", true, 56),
-                        new Respuesta("Müller", false, 47),
-                        new Respuesta("Eusébio", false, 46)
-                ));
+                new Respuesta("Müller", false, 47),
+                new Respuesta("Eusébio", false, 46)
+        ));
         preguntasQuizGoles.add(new Pregunta("¿Quién tiene más goles en champions?",
                 new Respuesta("Cristiano", true, 140),
                 new Respuesta("Messi", false, 129),
@@ -70,7 +67,7 @@ public class QuizActivity extends AppCompatActivity {
                 new Respuesta("Del Piero", false, 42),
                 new Respuesta("Agüero", false, 41),
                 new Respuesta("Puskás", false, 36)
-                ));
+        ));
 
         preguntasQuizGoles.add(new Pregunta("¿Quién tiene más goles en champions?",
                 new Respuesta("Inzaghi", true, 46),
@@ -115,12 +112,12 @@ public class QuizActivity extends AppCompatActivity {
         ArrayList<Pregunta> preguntasQuizAsistencias = new ArrayList<>();
 
 
-    preguntasQuizAsistencias.add(new Pregunta("¿Quién tiene más asistencias en champions?",
-        new Respuesta("Pirlo", true, 18),
+        preguntasQuizAsistencias.add(new Pregunta("¿Quién tiene más asistencias en champions?",
+                new Respuesta("Pirlo", true, 18),
                 new Respuesta("Henry", false, 18),
                 new Respuesta("Lampard", false, 17),
                 new Respuesta("Piqué", false, 17)
-    ));
+        ));
         preguntasQuizAsistencias.add(new Pregunta("¿Quién tiene más asistencias en champions?",
                 new Respuesta("Figo", false, 21),
                 new Respuesta("Modric", false, 20),
@@ -267,13 +264,13 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void iniciarQuiz() {
+    public void iniciarQuiz(View view) {
         preguntaActual = 0;
         puntuacion = 0;
         actualizarPregunta();
     }
 
-    private void actualizarPregunta() {
+    public void actualizarPregunta() {
         if (preguntaActual < quizzes.get(quizActual).getPreguntas().size()) {
             Pregunta pregunta = quizzes.get(quizActual).getPreguntas().get(preguntaActual);
             preguntaTextView.setText(pregunta.getTextoPregunta());
@@ -291,14 +288,14 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    private void verificarRespuesta(Respuesta respuesta, Button boton) {
+    public void verificarRespuesta(Respuesta respuesta, Button boton) {
         if (respuesta.isVerdadero()) {
             puntuacion += 50;
         }
         mostrarResultadoRespuesta(respuesta, boton);
     }
 
-    private void mostrarResultadoRespuesta(Respuesta respuesta, Button boton) {
+    public void mostrarResultadoRespuesta(Respuesta respuesta, Button boton) {
         String textoOriginal = boton.getText().toString();
         boton.setText(textoOriginal + " (" + respuesta.getResultado() + ")");
         handler.postDelayed(() -> {
@@ -309,7 +306,7 @@ public class QuizActivity extends AppCompatActivity {
                 2000);
     }
 
-    private void mostrarResultadoFinal() {
+    public void mostrarResultadoFinal() {
         preguntaTextView.setText("Quiz terminado! Puntuación: " + puntuacion);
         opcionAButton.setVisibility(View.GONE);
         opcionBButton.setVisibility(View.GONE);
@@ -317,13 +314,29 @@ public class QuizActivity extends AppCompatActivity {
         opcionDButton.setVisibility(View.GONE);
     }
 
-    private void siguienteQuiz() {
+    public void siguienteQuiz(View view) {
         quizActual++;
         if (quizActual < quizzes.size()) {
-            iniciarQuiz();
+            iniciarQuiz(view);
         } else {
             preguntaTextView.setText("No hay más quizzes disponibles.");
         }
+    }
+
+    public void opcionAClick(View view) {
+        verificarRespuesta(quizzes.get(quizActual).getPreguntas().get(preguntaActual).getRespuestas().get(0), opcionAButton);
+    }
+
+    public void opcionBClick(View view) {
+        verificarRespuesta(quizzes.get(quizActual).getPreguntas().get(preguntaActual).getRespuestas().get(1), opcionBButton);
+    }
+
+    public void opcionCClick(View view) {
+        verificarRespuesta(quizzes.get(quizActual).getPreguntas().get(preguntaActual).getRespuestas().get(2), opcionCButton);
+    }
+
+    public void opcionDClick(View view) {
+        verificarRespuesta(quizzes.get(quizActual).getPreguntas().get(preguntaActual).getRespuestas().get(3), opcionDButton);
     }
 
     private static class Pregunta {
@@ -375,7 +388,10 @@ public class QuizActivity extends AppCompatActivity {
         private ArrayList<Pregunta> preguntas;
 
         public Quiz(ArrayList<Pregunta> preguntas) {
-            this.preguntas = preguntas;
+            this.preguntas = new ArrayList<>();
+            for (Pregunta pregunta : preguntas) {
+                this.preguntas.add(pregunta);
+            }
         }
 
         public ArrayList<Pregunta> getPreguntas() {

@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:layout_marginBottom="228dp"
+        android:onClick="siguienteQuiz"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="40dp"
+        android:onClick="iniciarQuiz"
         android:text="Iniciar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opcionc" />
@@ -58,6 +60,7 @@
         android:id="@+id/opcionA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="opcionAClick"
         android:text="A"
         app:layout_constraintBottom_toBottomOf="@+id/opcionb"
         app:layout_constraintEnd_toStartOf="@+id/opcionb"
@@ -71,6 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
+        android:onClick="opcionBClick"
         android:text="B"
         app:layout_constraintBottom_toTopOf="@+id/puntuacion"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +84,7 @@
         android:id="@+id/opcionc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="opcionCClick"
         android:text="C"
         app:layout_constraintEnd_toStartOf="@+id/opciond"
         app:layout_constraintHorizontal_bias="0.331"
@@ -91,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
+        android:onClick="opcionDClick"
         android:text="D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opcionb" />

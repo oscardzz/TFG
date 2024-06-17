@@ -20,9 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://tfg2024-dc712-default-rtdb.europe-west1.firebasedatabase.app/");
     DatabaseReference myRef = database.getReference();
 
-    //FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //DatabaseReference myRef = database.getReferenceFromUrl("https://tfg2024-dc712-default-rtdb.firebaseio.com/");
-   // DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://tfg2024-dc712-default-rtdb.europe-west1.firebasedatabase.app/");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

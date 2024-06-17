@@ -30,7 +30,7 @@ public class MyAccountActivity extends AppCompatActivity {
         usuario = findViewById(R.id.usuario);
         fullname = findViewById(R.id.fullname);
         email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        password = findViewById(R.id.password2);
         phone = findViewById(R.id.phone);
         editButton = findViewById(R.id.editButton);
         updateButton = findViewById(R.id.updateButton);

@@ -1,43 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/fullname"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre Completo"
-        android:enabled="false"
-        android:maxLines="1" />
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Correo Electrónico"
-        android:enabled="false"
-        android:maxLines="1" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons_account"/>
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:enabled="false"
-        android:maxLines="1" />
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:hint="Nombre Completo"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/account"/>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/phone"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Número de Teléfono"
-        android:enabled="false"
-        android:inputType="phone"
-        android:maxLines="1" />
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons_email"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Correo Electrónico"
+            android:enabled="false"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/account"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons_password"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:enabled="false"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/account"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons_phone"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Numero de Teléfono"
+            android:inputType="phone"
+            android:enabled="false"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/account"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/editButton"

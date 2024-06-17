@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         final EditText usuarios = findViewById(R.id.usuario);
-        final EditText password = findViewById(R.id.password);
+        final EditText password = findViewById(R.id.password2);
         final Button LoginBtn = findViewById(R.id.loginBtn);
         final TextView registerNowBtn = findViewById(R.id.registrateYa);
 

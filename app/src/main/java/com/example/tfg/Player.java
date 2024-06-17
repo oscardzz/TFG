@@ -12,7 +12,7 @@ public class Player implements Parcelable {
     private String liga;
 
     public Player() {
-        // Constructor vacío necesario para Firebase
+
     }
 
     public Player(String nombre, String equipo, String posicion, String nacionalidad, String img, String liga) {
@@ -24,26 +24,50 @@ public class Player implements Parcelable {
         this.liga = liga;
     }
 
-    // Getters y setters
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-    public String getEquipo() { return equipo; }
-    public void setEquipo(String equipo) { this.equipo = equipo; }
-    public String getPosicion() { return posicion; }
-    public void setPosicion(String posicion) { this.posicion = posicion; }
-    public String getNacionalidad() { return nacionalidad; }
-    public void setNacionalidad(String nacionalidad) { this.nacionalidad = nacionalidad; }
-    public String getImg() { return img; }
-    public void setImg(String img) { this.img = img; }
 
-    public String getLiga(){return liga; }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getEquipo() {
+        return equipo;
+    }
+    public void setEquipo(String equipo) {
+        this.equipo = equipo;
+    }
+    public String getPosicion() {
+        return posicion;
+    }
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+    public String getImg()
+    {
+        return img;
+    }
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getLiga(){
+        String liga1 = liga;
+        return liga1;
+    }
 
     public void setLiga(String liga) {
         this.liga = liga;
     }
 
-    // Parcelable implementation
+
     protected Player(Parcel in) {
         nombre = in.readString();
         equipo = in.readString();
@@ -71,7 +95,9 @@ public class Player implements Parcelable {
     public static final Creator<Player> CREATOR = new Creator<Player>() {
         @Override
         public Player createFromParcel(Parcel in) {
+
             return new Player(in);
+
         }
 
         @Override

@@ -28,7 +28,7 @@ public class AccountFragment extends Fragment {
     private DatabaseReference userRef;
 
     public AccountFragment() {
-        // Required empty public constructor
+
     }
 
     public static AccountFragment newInstance(String userId) {
@@ -58,7 +58,8 @@ public class AccountFragment extends Fragment {
         phoneEditText = view.findViewById(R.id.phone);
         editButton = view.findViewById(R.id.editButton);
         updateButton = view.findViewById(R.id.updateButton);
-        // Obtener referencia de la base de datos del usuario actual
+
+
         userRef = FirebaseDatabase.getInstance().getReference().child("usuarios").child(userId);
 
         loadUserData();

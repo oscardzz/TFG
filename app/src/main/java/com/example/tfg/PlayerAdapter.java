@@ -60,20 +60,8 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
                     .into(playerImage);
         }
 
-        // Configurar el clic en el elemento de la lista
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mContext != null) {
-                    Player clickedPlayer = getItem(position);
-                    Intent intent = new Intent(mContext, PlayerDetailActivity.class);
-                    intent.putExtra("player", clickedPlayer);
-                    mContext.startActivity(intent);
-                } else {
-                    Log.e("PlayerAdapter", "Context is null");
-                }
-            }
-        });
+
+
 
         return convertView;
     }

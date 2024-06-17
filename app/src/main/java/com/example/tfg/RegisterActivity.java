@@ -7,12 +7,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText email = findViewById(R.id.email);
         final EditText usuarios = findViewById(R.id.Usuario);
         final EditText phone = findViewById(R.id.phone);
-        final EditText password = findViewById(R.id.password);
+        final EditText password = findViewById(R.id.password2);
         final EditText confirmPassword = findViewById(R.id.ConfirmPassword);
 
         final Button registerBtn = findViewById(R.id.registerBtn);

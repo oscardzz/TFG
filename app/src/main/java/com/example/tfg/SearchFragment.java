@@ -164,7 +164,8 @@ public class SearchFragment extends Fragment {
                         boolean matches = (player.getNombre() != null && player.getNombre().toLowerCase().contains(searchText.toLowerCase())) ||
                                 (player.getEquipo() != null && player.getEquipo().toLowerCase().contains(searchText.toLowerCase())) ||
                                 (player.getPosicion() != null && player.getPosicion().toLowerCase().contains(searchText.toLowerCase())) ||
-                                (player.getNacionalidad() != null && player.getNacionalidad().toLowerCase().contains(searchText.toLowerCase()));
+                                (player.getNacionalidad() != null && player.getNacionalidad().toLowerCase().contains(searchText.toLowerCase())) ||
+                                (player.getLiga() != null && player.getLiga().toLowerCase().contains(searchText.toLowerCase()));
 
                         if (matches) {
                             resultsList.add(player);

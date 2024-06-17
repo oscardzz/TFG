@@ -9,17 +9,19 @@ public class Player implements Parcelable {
     private String posicion;
     private String nacionalidad;
     private String img;
+    private String liga;
 
     public Player() {
         // Constructor vacío necesario para Firebase
     }
 
-    public Player(String nombre, String equipo, String posicion, String nacionalidad, String img) {
+    public Player(String nombre, String equipo, String posicion, String nacionalidad, String img, String liga) {
         this.nombre = nombre;
         this.equipo = equipo;
         this.posicion = posicion;
         this.nacionalidad = nacionalidad;
         this.img = img;
+        this.liga = liga;
     }
 
     // Getters y setters
@@ -35,6 +37,12 @@ public class Player implements Parcelable {
     public String getImg() { return img; }
     public void setImg(String img) { this.img = img; }
 
+    public String getLiga(){return liga; }
+
+    public void setLiga(String liga) {
+        this.liga = liga;
+    }
+
     // Parcelable implementation
     protected Player(Parcel in) {
         nombre = in.readString();
@@ -42,6 +50,7 @@ public class Player implements Parcelable {
         posicion = in.readString();
         nacionalidad = in.readString();
         img = in.readString();
+        liga = in.readString();
     }
 
     @Override
@@ -51,6 +60,7 @@ public class Player implements Parcelable {
         dest.writeString(posicion);
         dest.writeString(nacionalidad);
         dest.writeString(img);
+        dest.writeString(liga);
     }
 
     @Override

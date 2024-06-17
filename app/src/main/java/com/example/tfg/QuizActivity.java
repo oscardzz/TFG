@@ -314,15 +314,22 @@ public class QuizActivity extends AppCompatActivity {
         opcionDButton.setVisibility(View.GONE);
     }
 
-    public void siguienteQuiz(View view) {
+    public void siguienteQuiz() {
         quizActual++;
+        preguntaActual = 0;
         if (quizActual < quizzes.size()) {
-            iniciarQuiz(view);
+            siguienteButton.setVisibility(View.INVISIBLE);
         } else {
-            preguntaTextView.setText("No hay más quizzes disponibles.");
+            // No more quizzes available, show final score or reset
+            preguntaTextView.setText("¡Has completado todos los quizzes!");
+            opcionAButton.setVisibility(View.INVISIBLE);
+            opcionBButton.setVisibility(View.INVISIBLE);
+            opcionCButton.setVisibility(View.INVISIBLE);
+            opcionDButton.setVisibility(View.INVISIBLE);
+            siguienteButton.setVisibility(View.INVISIBLE);
+            iniciarButton.setVisibility(View.VISIBLE);
         }
     }
-
     public void opcionAClick(View view) {
         verificarRespuesta(quizzes.get(quizActual).getPreguntas().get(preguntaActual).getRespuestas().get(0), opcionAButton);
     }

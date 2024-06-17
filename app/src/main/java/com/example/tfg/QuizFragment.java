@@ -50,7 +50,7 @@ public class QuizFragment extends Fragment {
     }
 
     public void inicializarQuizzes() {
-        // Inicializar preguntas y quizzes manualmente
+
         ArrayList<QuizFragment.Pregunta> preguntasQuizGoles = new ArrayList<>();
         preguntasQuizGoles.add(new QuizFragment.Pregunta("¿Quién tiene más goles en champions?",
                 new QuizFragment.Respuesta("Lewandowski", true, 91),
@@ -201,7 +201,8 @@ public class QuizFragment extends Fragment {
         puntuacion = 0;
         actualizarPregunta();
         puntuacionTextView.setText("Puntuación: " + puntuacion);
-        // Reiniciar visibilidad de los botones y otros elementos de UI si es necesario
+
+
         opcionAButton.setVisibility(View.VISIBLE);
         opcionBButton.setVisibility(View.VISIBLE);
         opcionCButton.setVisibility(View.VISIBLE);

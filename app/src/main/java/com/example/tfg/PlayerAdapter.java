@@ -54,7 +54,8 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
             playerNationality.setText(player.getNacionalidad());
             playerLeague.setText(player.getLiga());
 
-            // Cargar la imagen usando Glide
+
+
             Glide.with(mContext)
                     .load(player.getImg())
                     .into(playerImage);

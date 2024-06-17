@@ -25,7 +25,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quiz); // Asegúrate de que este sea el nombre correcto de tu archivo XML
+        setContentView(R.layout.quiz);
 
         preguntaTextView = findViewById(R.id.pregunta);
         opcionAButton = findViewById(R.id.opcionA);
@@ -320,7 +320,7 @@ public class QuizActivity extends AppCompatActivity {
         if (quizActual < quizzes.size()) {
             siguienteButton.setVisibility(View.INVISIBLE);
         } else {
-            // No more quizzes available, show final score or reset
+
             preguntaTextView.setText("¡Has completado todos los quizzes!");
             opcionAButton.setVisibility(View.INVISIBLE);
             opcionBButton.setVisibility(View.INVISIBLE);

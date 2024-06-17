@@ -201,7 +201,8 @@ public class QuizFragment extends Fragment {
         puntuacion = 0;
         actualizarPregunta();
         puntuacionTextView.setText("Puntuación: " + puntuacion);
-        // Reiniciar visibilidad de los botones y otros elementos de UI si es necesario
+
+
         opcionAButton.setVisibility(View.VISIBLE);
         opcionBButton.setVisibility(View.VISIBLE);
         opcionCButton.setVisibility(View.VISIBLE);

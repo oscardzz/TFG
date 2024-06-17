@@ -31,7 +31,7 @@ public class PlayerDetailActivity extends AppCompatActivity {
         positionTextViews = findViewById(R.id.positionTextView);
         nationalityTextViews = findViewById(R.id.nationalityTextView);
 
-        // Obtener el jugador desde el Intent
+
         Player Player = (Player) getIntent().getSerializableExtra("player");
 
         if (Player != null) {

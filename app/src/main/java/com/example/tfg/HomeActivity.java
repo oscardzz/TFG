@@ -42,10 +42,11 @@ public class HomeActivity extends AppCompatActivity {
         final TextView quizTxt = findViewById(R.id.quizTxt);
         final TextView accountTxt = findViewById(R.id.accountTxt);
 
-        // Obtener el usuario pasado desde el LoginActivity
+
         String usuario = getIntent().getStringExtra("usuario");
 
-        // Cargar el fragmento inicial (HomeFragment)
+
+
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, HomeFragment.class, null)

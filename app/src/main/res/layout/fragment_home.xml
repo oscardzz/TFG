@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/home"
-    tools:context=".HomeFragment">
-
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:gravity="center"
-    android:text="Home Fragment"
-    android:textColor="#FFFFFF"
-    android:textStyle="bold"
-    android:textSize="20sp"/>
+    android:background="@color/home">
 
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_launcher_foreground_icon"
+        android:contentDescription="Logo"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="16dp" />
 
+    <ImageView
+        android:id="@+id/futbolImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/fondo_home"
+        android:contentDescription="Foto de Futbol"
+        android:scaleType="fitCenter" />
 
-</FrameLayout>
+</LinearLayout>
